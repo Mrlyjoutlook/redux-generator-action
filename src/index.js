@@ -2,7 +2,6 @@ import co from 'co';
 
 export default function generator({ dispatch, getState }) {
     return next => action => {
-        console.log(action)
         // Check action is Array?
         if (!Array.isArray(action)) return next(action);
         function dealType(obj) {
@@ -20,7 +19,7 @@ export default function generator({ dispatch, getState }) {
 
         function* gen(arr) {
             for (let i=0,n=arr.length;i<n;i++) {
-                yield Array.isArray(arr[i]) ? gen(arr[i]) : dealType(arr[i])
+                yield Array.isArray(arr[i]) ? gen(arr[i]) : typeof arr[i] === 'object' ? dealType(arr[i]) : dispatch(arr[i]);
             }
         }
         return co(gen(action))
