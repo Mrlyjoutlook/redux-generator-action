@@ -1,9 +1,9 @@
 {
   "name": "redux-generator-action",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "an action flow control,redux middleware",
   "main": "lib/index.js",
-  "author": "mrlyj",
+  "author": "mrlyj <mr.lyj@outlook.com>",
   "license": "MIT",
   "scripts": {
     "test": "./node_modules/.bin/mocha test",
@@ -19,7 +19,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git@github.com:Mrlyjoutlook/redux-generator-action.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Mrlyjoutlook/redux-generator-action/issues"
   },
   "dependencies": {
     "co": "^4.6.0"
