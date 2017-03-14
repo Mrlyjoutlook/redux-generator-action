@@ -11,11 +11,11 @@ new WebpackDevServer(webpack(config),{
         hot: true,
         inline:true,
         port: 8000,
-        publicPath: path.join(__dirname,'./dist'),
+        publicPath: '/assets/',
         noInfo: false
-}).listen(8000,'localhost',err=>{
+    }).listen(8000,'localhost',err=>{
     if(err) console.log(err);
     console.log('listening at localhost:8000');
     console.log('open your system browser!')
-    open('http://localhost:8000')
+    open('http://localhost:8000');
 })

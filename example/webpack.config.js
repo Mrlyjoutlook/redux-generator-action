@@ -8,14 +8,14 @@ module.exports={
     cache: true,
     entry: [
         'react-hot-loader/patch',
-        'webpack-hot-middleware/client?http://localhost:8000',
+        'webpack-dev-server/client?http://localhost:8000',
         'webpack/hot/only-dev-server',
         './src/index.js'
     ],
     output: {
-        path: path.join(__dirname,'./dist/'),
+        path: path.join(__dirname,'./dist/assets'),
         filename: 'bundle.js',
-        publicPath: '/'
+        publicPath: '/assets/'
     },
     resolve: {
       extensions: ['.ts', '.js', '.json']

@@ -1,23 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { createStore, applyMiddleware } from 'redux';
+import { createStore, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
 import { AppContainer } from 'react-hot-loader';
 import thunk from 'redux-thunk';
-import generator from '../../lib';
+import generator from '../../src/index';
 import reducer from './reducers';
 import App from './components/App';
 
 const store = createStore(
   reducer,
-  applyMiddleware([thunk,generator])
+  compose(
+    applyMiddleware(generator,thunk)
+  )
 )
 
 const render = (Component) => {
   ReactDOM.render(
       <Provider store={store}>
         <AppContainer>
-        <App />
+          <App/>
         </AppContainer>
       </Provider>,
     document.getElementById('root')
