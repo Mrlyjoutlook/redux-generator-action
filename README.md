@@ -3,7 +3,7 @@ an action flow control,redux middleware
 
 # Use
 type action
-## acton = [{type:'**'},{type:'**'}]
+#### acton = [{type:'**'},{type:'**'}]
 
 ```
 dispatch([
@@ -11,7 +11,7 @@ dispatch([
 ])
 ```
 
-## action = [{type:'**'},[{type:'**'},{type:'**'}], ...]
+#### action = [{type:'**'},[{type:'**'},{type:'**'}], ...]
 
 ```
 dispatch([
@@ -19,6 +19,6 @@ dispatch([
 ])
 ```
 
-## action = [{type:'**'},{type:'GEN_ALL',data:[{type:'**'},{type:'**'}]}, ...]
+#### action = [{type:'**'},{type:'GEN_ALL',data:[{type:'**'},{type:'**'}]}, ...]
 
-## action = [{type:'**'},{type:'GEN_RACE',data:[{type:'**'},{type:'**'}]}, ...]
+#### action = [{type:'**'},{type:'GEN_RACE',data:[{type:'**'},{type:'**'}]}, ...]
