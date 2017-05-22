@@ -7,6 +7,7 @@ const webpack = require('webpack'),
 
 new WebpackDevServer(webpack(config),{
         contentBase: path.join(__dirname,'./'),
+        quiet: true,
         historyApiFallback: true,
         hot: true,
         inline:true,

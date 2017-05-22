@@ -1,6 +1,9 @@
 'use strict';
 
 var webpack = require('webpack'),
+    Dashboard = require('webpack-dashboard'),
+    DashboardPlugin = require('webpack-dashboard/plugin'),
+    dashboard = new Dashboard(),
     path = require('path');
 
 module.exports={
@@ -28,6 +31,7 @@ module.exports={
       }],
     },
     plugins: [
+        new DashboardPlugin(dashboard.setData),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NamedModulesPlugin(),
         new webpack.NoEmitOnErrorsPlugin()
